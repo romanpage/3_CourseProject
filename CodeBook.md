@@ -69,13 +69,14 @@ tBodyGyroJerkMean
 
 
 ### Processed data:
-1. Merged the training and the test sets to create one data set.
-2. Extracted only the measurements on the mean and standard deviation for each measurement (only the 79 variables that contain "mean()" and "std()") 
-3. replaced activity id with activity labels ("walking", "sitting", etc.)
-4. Labelled the data set with descriptive variable names from features.txt within read.table()
-5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject (performed a groupby for the two fields you identified then a summarise_each to execute the function 'mean'). And then generates a tidy data text file that meets the principles of tidy data (tidy_dataset (local data frame [180 x 81])).
+* merged the training and the test sets to create one data set
+* Extracted only the measurements on the mean and standard deviation for each measurement (only the 79 variables that contain "mean()" and "std()") 
+* replaced activity id with activity labels ("walking", "sitting", etc.)
+* labelled the data set with descriptive variable names from features.txt within read.table()
+* from the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject (performed a groupby for the two fields you identified then a summarise_each to execute the function 'mean')
+* generates a tidy data text file that meets the principles of tidy data (local data frame [180 x 81]))
 
-tidy_dataset (local data frame [180 x 81]) contains:
+tidy_dataset (local data frame [180 x 81]) contains
 1 An identifier of the subject who carried out the experiment.
 1 Its activity label.
 79 variables that contain the average of each feature for each activity and each subject.
